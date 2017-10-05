@@ -1,19 +1,25 @@
 angular.module('rateShowsApp', [])
-  .controller('RateShowsListController', function() {
+  .controller('RateShowsListController', function($scope) {
     var rateShowsList = this;
     rateShowsList.shows = [
-      {text:'The Game of Thrones', rating:5},
-      {text:'Orange Is The New Black', rating:4},
-      {text:'Twin Peaks', rating:4},
-      {text:'BoJack Horseman', rating:3},
-      {text:'Stranger Things', rating:4},
-      {text:'The Crown', rating:5},
-      {text:'The Good Doctor', rating:2},
-      {text:'Defenders', rating:2}];
+      {name:'The Game of Thrones', tagline: "Fear is For the Winter", rating:5},
+      {name:'Orange Is The New Black', tagline: "Bitches Gots to Learn", rating:4},
+      {name:'Twin Peaks', tagline: "A town where everyone knows everyone and nothing is what it seems", rating:4},
+      {name:'BoJack Horseman', tagline: "Don't look back. You're not going that way.", rating:3},
+      {name:'Stranger Things', tagline: "Some Doors Can't Be Closed", rating:4},
+      {name:'The Crown', tagline: "Two houses, two courts, one Crown", rating:5},
+      {name:'The Good Doctor', tagline: "Good Doctor, Bad Habits", rating:2},
+      {name:'Defenders', tagline: "not here to make friends", rating:2}
+
+      ];
 
  
     rateShowsList.rateShow = function() {
     
     };
- 
+
+    $scope.nameToUrl = function (showName) {
+    	return "images/"+showName.replace(/\s/g, '') + ".jpg";
+    };
+
  });

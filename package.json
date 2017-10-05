@@ -1,0 +1,23 @@
+{
+  "name": "rateshows",
+  "version": "1.0.0",
+  "description": "rate shows, watch trailers, write a review",
+  "main": "index.js",
+  "scripts": {
+    "start" : "http-server -o",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/sprakash/RateShows.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sprakash/RateShows/issues"
+  },
+  "homepage": "https://github.com/sprakash/RateShows#readme",
+  "dependencies": {
+    "sass-loader": "^6.0.6"
+  }
+}

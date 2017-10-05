@@ -4,15 +4,23 @@
 	     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
 	     <script src="rateShows.js"></script>
 	     <link rel="stylesheet" href="rateShows.css">
+		 <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">  
+		 <!-- avoiding favicon request -->
 	 </head>
      <body>
      	<!-- All Shows --> 
-     	<section id="allShows">
+     	<section id="allShows" ng-controller="RateShowsListController as rateShowsList">
 
-     		<div ng-controller="RateShowsListController as rateShowsList">
+     		<div>
      			<ul class="unstyled">
      				<li ng-repeat="show in rateShowsList.shows">
-     					
+     					<figure>
+     						<img ng-src="{{nameToUrl(show.name)}}" alt="{{show.name}}"/>
+     						<figcaption>
+     							<p>{{show.name}} : <em>{{show.tagline}}</em></p>
+     							<a href="#">Rate Show</a>
+     						</figcaption>
+     					</figure>
      				</li>
      			</ul>
      		</div>
