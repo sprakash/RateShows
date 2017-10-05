@@ -2,7 +2,7 @@ angular.module('rateShowsApp', [])
   .controller('RateShowsListController', function($scope) {
     var rateShowsList = this;
     rateShowsList.shows = [
-      {name:'The Game of Thrones', tagline: "Fear is For the Winter", rating:5},
+      {name:'Game of Thrones', tagline: "Fear is For the Winter", rating:5},
       {name:'Orange Is The New Black', tagline: "Bitches Gots to Learn", rating:4},
       {name:'Twin Peaks', tagline: "A town where everyone knows everyone and nothing is what it seems", rating:4},
       {name:'BoJack Horseman', tagline: "Don't look back. You're not going that way.", rating:3},

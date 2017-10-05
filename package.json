@@ -4,8 +4,10 @@
   "description": "rate shows, watch trailers, write a review",
   "main": "index.js",
   "scripts": {
-    "start" : "http-server -o",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": " \"npm run watch:sass\" | http-server -o",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:sass": "node-sass src/sass_folder/ -o src/css_folder",
+    "watch:sass": "npm run build:sass && node-sass src/sass_folder/ -wo src/css_folder/"
   },
   "repository": {
     "type": "git",
@@ -18,6 +20,7 @@
   },
   "homepage": "https://github.com/sprakash/RateShows#readme",
   "dependencies": {
+    "generator-angular": "^0.16.0",
     "sass-loader": "^6.0.6"
   }
 }

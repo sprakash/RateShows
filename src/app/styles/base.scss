@@ -1,0 +1,15 @@
+$font-stack:    Georgia, sans-serif;
+$primary-color: coral;
+
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
+
+ 
+body { 
+  font: 100% $font-stack;
+  color: $primary-color;
+ }
+
+ figure {
+ 	margin: 2px;
+ }
+

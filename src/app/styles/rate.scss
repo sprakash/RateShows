@@ -1,0 +1,50 @@
+ul.gallery {
+
+	width: 100%;
+
+	li { 
+		width: 135px;
+		float: left;
+		height: 380px;
+		border: 1px solid coral;
+		list-style-type: none;
+		margin: 5px;
+
+		&:hover {
+		 		border:1px solid #777;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+
+		p {
+  			font-family: 'Open Sans', sans-serif;
+		}
+
+		a {
+			  background-color: #1d609c;
+			  color: white;
+    	      font-family: 'Open Sans';
+    		  font-size: 20px;
+    		  border: 2px solid coral;
+    		  text-decoration: none;
+    		  font-size: 13px;
+    		  padding: 0em 1em;
+		}
+	}
+}
+
+
+figcaption {
+	padding: .5em .5em 1em .5em;
+	text-align: center;
+
+	em {
+		font-size: 12px;
+    	display: block;
+    	margin-top: .5em;
+    	font-family: Georiga;
+	}
+}
