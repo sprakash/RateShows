@@ -1,0 +1,32 @@
+<!doctype html>
+<html ng-app="rateShowsApp">
+     <head>
+	     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+	     <script src="rateShows.js"></script>
+	     <link rel="stylesheet" href="rateShows.css">
+	 </head>
+     <body>
+     	<!-- All Shows --> 
+     	<section id="allShows">
+
+     		<div ng-controller="RateShowsListController as rateShowsList">
+     			<ul class="unstyled">
+     				<li ng-repeat="show in rateShowsList.shows">
+     					
+     				</li>
+     			</ul>
+     		</div>
+
+     	</section>
+     
+     	<!-- Rate View -->
+     	<section id="rateView">
+
+     	</section>
+     	
+     	<!-- Trailer View -->
+     	<section id="trailerView">
+
+     	</section>
+     </body>
+</html>
