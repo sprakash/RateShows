@@ -8,8 +8,7 @@
  *
  * Main module of the application.
  */
-angular
-  .module('srcApp', [
+angular.module('RateShowsApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',

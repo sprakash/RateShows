@@ -1,41 +1,51 @@
 <!doctype html>
 <html ng-app="rateShowsApp">
      <head>
+          <meta charset="utf-8">
+          <base href="/">
+
 	     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
-	     <script src="rateShows.js"></script>
+          <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-route.min.js"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
+          <script src="rateShows.js"></script>
 	     <link rel="stylesheet" href=".tmp/styles/base.css">
 	     <link rel="stylesheet" href=".tmp/styles/rate.css">
 		 <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">  
 		 <!-- avoiding favicon request -->
+
+
 	 </head>
      <body>
-     	<!-- All Shows --> 
-     	<section id="allShows" ng-controller="RateShowsListController as rateShowsList">
+          <section ng-view></section>
+          <section>
+          	<!-- All Shows --> 
+          	<section id="allShows" ng-controller="RateShowsListController as rateShowsList">
+                         <div style="text-align:center;">{{message}}</div>
+          			<ul class="gallery">
+          				<li ng-repeat="show in rateShowsList.shows">
+          					<figure>
+                                        <img ng-src="{{nameToImgUrl(show.name)}}" alt="{{show.name}}"/>
+          						<figcaption>
+                                             <a ng-href="/rateShow/{{show.id}}">Rate Show</a>
+          							<p>{{show.name}}  <em>{{show.tagline}}</em></p>
+          						</figcaption>
+          					</figure>
+          				</li>
+          			</ul>
+          	</section>
 
-     		<div>
-     			<ul class="gallery">
-     				<li ng-repeat="show in rateShowsList.shows">
-     					<figure>
-     						<img ng-src="{{nameToUrl(show.name)}}" alt="{{show.name}}"/>
-     						<figcaption>
-     							<a href="#">Rate Show</a>
-     							<p>{{show.name}}  <em>{{show.tagline}}</em></p>
-     						</figcaption>
-     					</figure>
-     				</li>
-     			</ul>
-     		</div>
+          </section>
 
-     	</section>
-     
-     	<!-- Rate View -->
-     	<section id="rateView">
+         <!-- <script type="text/ng-template" id="rateShow.html">
 
-     	</section>
-     	
-     	<!-- Trailer View -->
-     	<section id="trailerView">
+               <h2> Rate Show </h2>
 
-     	</section>
+          </script>
+
+          <script type="text/ng-template" id="trailer.html">
+
+               <h2> Show Trailers </h2>
+
+          </script> -->
      </body>
 </html>
